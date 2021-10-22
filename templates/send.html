@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+{% block contenido %}
+
+
+<form action="/send/" method="post">
+    {{prueba.de.label}} {{prueba.de}}	
+    <br>
+    {{prueba.para.label}} {{prueba.para}}
+    <br>
+    {{prueba.asunto.label}} {{prueba.asunto}}
+    <br>
+    {{prueba.mensaje.label}} {{prueba.mensaje}}
+    <br>
+    <div class='c8'>&nbsp;</div>
+    <div class='c2'>{{ prueba.btn() }}</div>
+    {% for msg in get_flashed_messages() %}
+    <div class='fila'>{{ msg }}</div>
+    {% endfor %}
+    </div>
+
+</form>
+        
+{% endblock %}
